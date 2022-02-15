@@ -2,7 +2,7 @@
 This folder contains Ipython Jupyter Notebook related to Project 1 - Data Science Blog Post - of Udacity's Data Scientist Nanodegree.
 
 ## Project Motivation
-As part of Udacity's Data Scientist Nanodegree, in which I am currently enrolled in, we are supposed to pick a dataset of our choice and perform some EDA to answer few questions of our own choice. I picked up AirBnB's Boston dataset (link to which provided below) and posed the following 3 questions:
+As part of Udacity's Data Scientist Nanodegree, in which I am currently enrolled in, we are supposed to pick a dataset of our choice and perform some EDA to answer few questions of our own choice. I picked up AirBnB's Boston dataset and posed the following 3 questions:
 1. What are the factors that justify the high prices of AirBnBs? OR Let’s say, what makes them PREMIUM?
 2. What is the difference between amenities offered by AirBnBs in the top 10 %ile and those in the bottom 10 %ile of the price band?
 3. What is the best time for being a host at AirBnB?
@@ -11,9 +11,9 @@ As part of Udacity's Data Scientist Nanodegree, in which I am currently enrolled
 1. [calendar data](https://www.kaggle.com/airbnb/boston?select=calendar.csv)
     - Dataset contains the price and availability of all the listings in Boston on a daily level between Sept 6, 2016 to Sept 5, 2017.
 2. [listings data](https://www.kaggle.com/airbnb/boston?select=listings.csv)
-    - Dataset contains detailed information related to all the listings in Boston between September 6, 2016 to September 7, 2017.
+    - Dataset contains detailed information related to all the listings in Boston between Sept 6, 2016 to Sept 7, 2017.
 
-## Python Packages
+## Required Python Packages
 Python packages required to run the notebook are
 - Numpy
 - Pandas
