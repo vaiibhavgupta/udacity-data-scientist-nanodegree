@@ -1,2 +1,3 @@
 # udacity_data_scientist_nanodegree
-This repository contain Jupyter Notebooks and Python Scripts related to Projects from Udacity's Data Scientist Nanodegree.
+
+This repository contains Ipython Jupyter Notebooks, Python Scripts, Generated Figures, and Datasets related to Projects from Udacity's Data Scientist Nanodegree.
