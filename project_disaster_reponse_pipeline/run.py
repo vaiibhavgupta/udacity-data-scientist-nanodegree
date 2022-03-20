@@ -197,7 +197,7 @@ vizualize_data_page_layout = html.Div([
     html.P("Disaster Response Project Data Vizualization", style=heading_style_h2),
     html.Br(),
     html.Div([
-        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Number of Messages received via different Platforms.png', 'rb').read()).decode('ascii')}")
+        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Number of Messages received via different Genre.png', 'rb').read()).decode('ascii')}")
     ], style = image_style_dict),
     html.Br(),
     html.Div([
@@ -205,11 +205,11 @@ vizualize_data_page_layout = html.Div([
     ], style = image_style_dict),
     html.Br(),
     html.Div([
-        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Number of Messages received for different Categories.png', 'rb').read()).decode('ascii')}")
+        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Number of Messages in different Categories by Genre.png', 'rb').read()).decode('ascii')}")
     ], style = image_style_dict),
     html.Br(),
     html.Div([
-        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Number of Messages received for different Categories.png', 'rb').read()).decode('ascii')}")
+        html.Img(src=f"data:image/png;base64,{base64.b64encode(open(GetGlobalVariables.data_viz_folder+'/Distribution of Number of Categories to which a Message belongs.png', 'rb').read()).decode('ascii')}")
     ], style = image_style_dict),
     html.Br()
 ])
