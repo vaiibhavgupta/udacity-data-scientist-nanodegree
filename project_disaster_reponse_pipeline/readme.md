@@ -1,11 +1,18 @@
 # Disaster Response Message Classification Pipeline Project
-This folder contains Ipython Jupyter Notebook related to Project 1 - Data Science Blog Post - of Udacity's Data Scientist Nanodegree.
-
-## Project Motivation
-As part of Udacity's Data Scientist Nanodegree, in which I am currently enrolled in, we are supposed to pick a dataset of our choice and perform some EDA to answer few questions of our own choice. I picked up AirBnB's Boston dataset and posed the following 3 questions:
-1. What are the factors that justify the high prices of AirBnBs? OR Let’s say, what makes them PREMIUM?
-2. What is the difference between amenities offered by AirBnBs in the top 10 %ile and those in the bottom 10 %ile of the price band?
-3. What is the best time for being a host at AirBnB?
+This Directory contains following sub-Directories and Scripts related to Project 2 - Disaster Response Message Classification Pipeline Project - of Udacity's Data Scientist Nanodegree.
+- **_data_** - Directory containing training dataset and cleaned and processed dataset.
+    - _messages.csv_ - A CSV file that contains messages received via different platforms at time of disaster. Provided by [Figure 8](https://appen.com).
+    - _categories.csv_ - A CSV file that contains categories to which each row in above CSV file belongs to. Provided by [Figure 8](https://appen.com).
+    - _disaster_response.db_ - SQLite database that contains clean and processed data from the CSV files.
+- **_plots_** - Directory containing vizualizations describing training dataset.
+    - _Distribution of Number of Categories to which a Message belongs.png_ - A BarChart depicting number of categories to which a message belongs.
+    - _Number of Messages in different Categories.png_ - A BarChart depicting number of messages in each of the 35 categories in the dataset.
+    - _Number of Messages in different Categories by Genre.png_ - A BarChart depicting number of messages in each of the 35 categories in the dataset by Genre (mode of receiving a message).
+    - _Number of Messages received via different Genre.png_ - A BarChart depicting number of messages received via different Genre.
+- **_models.zip_** - Zipped directory containing 35 trained models for each of 35 categories in the training dataset.
+- **_process_data.py_** - Python script that reads in data from CSV files, cleans the data, and loads the data into SQL database.
+- **_train_classifier.py_** - Python Script that reads in data from SQL database, train and save a model for each of the 35 different categories.
+- **_run.py_** - Python Script that deploys a dashboard constructed with Plotly Dash on a localhost.
 
 ## Dataset
 1. [calendar data](https://www.kaggle.com/airbnb/boston?select=calendar.csv)
