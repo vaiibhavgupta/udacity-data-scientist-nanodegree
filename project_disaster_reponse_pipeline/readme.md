@@ -3,8 +3,8 @@ Welcome to the repository of Second Project of Udacity's Data Scientist Nanodegr
 
 ## Project Overview
 
-! [alt text]()
-! [alt text]()
+![alt text](https://github.com/vaiibhavgupta/udacity_data_scientist_nanodegree/blob/main/project_disaster_reponse_pipeline/app%20screenshots/Classify%20Messages.jpeg)
+![alt text](https://github.com/vaiibhavgupta/udacity_data_scientist_nanodegree/blob/main/project_disaster_reponse_pipeline/app%20screenshots/Vizualize%20Data.jpeg)
 
 ## Project Structure
 - **_data_** - A sub-directory containing training dataset and cleaned and processed dataset.
