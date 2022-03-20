@@ -3,6 +3,8 @@ Welcome to the repository of Second Project of Udacity's Data Scientist Nanodegr
 
 ## Project Overview
 
+! [alt text]()
+! [alt text]()
 
 ## Project Structure
 - **_data_** - A sub-directory containing training dataset and cleaned and processed dataset.
