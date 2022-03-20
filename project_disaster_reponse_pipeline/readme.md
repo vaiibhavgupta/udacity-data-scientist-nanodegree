@@ -1,7 +1,8 @@
 # Disaster Response Message Classification Pipeline Project
-Welcome to repository of Project 2 of Udacity's Data Scientist Nanodegree in collaboration with [Figure 8](https://appen.com).
+Welcome to the repository of Second Project of Udacity's Data Scientist Nanodegree in collaboration with [Figure 8](https://appen.com).
 
 ## Project Overview
+
 
 ## Project Structure
 - **_data_** - A sub-directory containing training dataset and cleaned and processed dataset.
@@ -34,6 +35,6 @@ Following packages should be installed with Python 3.9.5 to successfully run thi
 3. Create and activate a virtual environment that satisfies all the above-mentioned requirements.
 4. If you do not wish to create your own SQLite database and train your own models, you can simply run the project with the provided models and SQLite database entering the following command in the terminal after navigating to the project's main directory -  ```python run.py```
 5. Or if you wish to create your own SQLite database and train all the models from scratch run the following commands in sequence in the terminal after navigating to project's directory - 
-    - ```python process_data.py '/path_to_project_folder/data/messages.csv' '/path_to_project_folder/data/disaster_categories.csv' '/path_to_project_folder/data/'```
-    - ```python train_classifier.py '/path_to_project_folder/data/' '/path_to_project_folder/models/'```
+    - ```python process_data.py '/path_to_project_directory/data/messages.csv' '/path_to_project_directory/data/categories.csv' '/path_to_project_directory/data/'```
+    - ```python train_classifier.py '/path_to_project_directory/data/' '/path_to_project_directory/models/'```
     - ```python run.py```
