@@ -275,6 +275,5 @@ def run_classifiers(n_clicks, input_text):
     return [output_button_style_default for i in GetGlobalVariables.model_name_list]
 
 
-
 if __name__ =='__main__':
     app.run_server(debug=True, host='localhost', use_reloader=False)
