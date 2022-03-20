@@ -1,8 +1,12 @@
 # Disaster Response Message Classification Pipeline Project
-This Directory contains following sub-Directories and Scripts related to Project 2 - Disaster Response Message Classification Pipeline Project - of Udacity's Data Scientist Nanodegree.
+Welcome to repository of Project 2 of Udacity's Data Scientist Nanodegree in collaboration with [Figure 8](https://appen.com).
+
+## Project Overview
+
+## Project's Folder Structure
 - **_data_** - Directory containing training dataset and cleaned and processed dataset.
-    - _messages.csv_ - A CSV file that contains messages received via different platforms at time of disaster. Provided by [Figure 8](https://appen.com).
-    - _categories.csv_ - A CSV file that contains categories to which each row in above CSV file belongs to. Provided by [Figure 8](https://appen.com).
+    - _messages.csv_ - A CSV file that contains messages received via different platforms at time of disaster.
+    - _categories.csv_ - A CSV file that contains categories to which each row in above CSV file belongs to.
     - _disaster_response.db_ - SQLite database that contains clean and processed data from the CSV files.
 - **_plots_** - Directory containing vizualizations describing training dataset.
     - _Distribution of Number of Categories to which a Message belongs.png_ - A BarChart depicting number of categories to which a message belongs.
@@ -14,23 +18,19 @@ This Directory contains following sub-Directories and Scripts related to Project
 - **_train_classifier.py_** - Python Script that reads in data from SQL database, train and save a model for each of the 35 different categories.
 - **_run.py_** - Python Script that deploys a dashboard constructed with Plotly Dash on a localhost.
 
-## Dataset
-1. [calendar data](https://www.kaggle.com/airbnb/boston?select=calendar.csv)
-    - Dataset contains the price and availability of all the listings in Boston on a daily level between Sept 6, 2016 to Sept 5, 2017.
-2. [listings data](https://www.kaggle.com/airbnb/boston?select=listings.csv)
-    - Dataset contains detailed information related to all the listings in Boston between Sept 6, 2016 to Sept 7, 2017.
+## Required Packages
+Following packages should be installed with Python 3.9.5 to successfully run this project
+- [numpy](https://pypi.org/project/numpy/)
+- [pandas](https://pypi.org/project/pandas/)
+- [nltk](https://pypi.org/project/nltk/)
+- [scikit-learn](https://pypi.org/project/scikit-learn/)
+- [SQLAlchemy](https://pypi.org/project/SQLAlchemy/)
+- [dash](https://pypi.org/project/dash/)
+- [dash-bootstrap-components](https://pypi.org/project/dash-bootstrap-components/)
 
-## Required Python Packages
-Python packages required to run the notebook are
-- Numpy
-- Pandas
-- Seaborn
-
-## How to use the Ipython Notebook 
-1. Download the notebook into a folder in your local system.
-2. Download both the datasets to the same folder where you have downloaded the notebook.
-3. Create a virtual environment and install above-mentioned python packages.
-4. Activate the virtual environment and start the notebook.
-
-## Blog
-The blog related to this project can be found [here](https://medium.com/@vaibhavgupta.1apr/looking-to-invest-in-airbnb-real-estate-in-boston-give-this-article-and-data-science-a-chance-to-1108202fc49d)
+## Running the project
+1. Download all the files and directories available here to a directory on your local and maintain the same directory structure as in here.
+2. U
+3. Download both the datasets to the same folder where you have downloaded the notebook.
+4. Create a virtual environment and install above-mentioned python packages.
+5. Activate the virtual environment and start the notebook.
