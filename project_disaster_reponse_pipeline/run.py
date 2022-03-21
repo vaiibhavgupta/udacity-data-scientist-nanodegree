@@ -6,7 +6,7 @@ import dash
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 
-from train_classifier import tokenize
+from models.train_classifier import tokenize
 
 
 class GetGlobalVariables:
