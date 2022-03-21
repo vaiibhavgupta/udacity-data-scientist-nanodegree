@@ -1,3 +1,4 @@
+import os
 import re
 import sys
 import pickle
@@ -175,6 +176,9 @@ def main():
 
     if len(sys.argv) == 3:
         database_folder_path, model_folder_path = sys.argv[1:]
+
+        database_folder_path = os.getcwd() + '/' + database_folder_path
+        model_folder_path = os.getcwd() + '/' + model_folder_path
 
         if not database_folder_path.endswith('/'):
             database_folder_path += '/'
