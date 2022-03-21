@@ -1,3 +1,4 @@
+import os
 import sys
 import pandas as pd
 from sqlalchemy import create_engine as sqlalchemy_create_engine
@@ -108,7 +109,10 @@ def save_data_into_sql_db(df, sql_engine):
 def main():
     if len(sys.argv) == 4:
         messages_file_path, categories_file_path, database_folder_path = sys.argv[1:]
-
+        messages_file_path = os.getcwd() + '/' + messages_file_path
+        categories_file_path = os.getcwd() + '/' + categories_file_path
+        database_folder_path = os.getcwd() + '/' + database_folder_path
+        
         if not database_folder_path.endswith('/'):
             database_folder_path += '/'
 
