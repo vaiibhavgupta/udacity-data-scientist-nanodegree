@@ -48,7 +48,7 @@ Following packages should be installed with Python 3.9.5 to successfully run thi
 3. Create and activate a virtual environment that satisfies all the above-mentioned requirements.
 4. If you do not wish to create your own SQLite database and train your own models, you can simply run the project with the provided models and SQLite database entering the following command in the terminal after navigating to the project's main directory -
     1. ```python run.py```
-6. Or if you wish to create your own SQLite database and train all the models from scratch run the following commands in sequence in the terminal after removing the **_disaster_response.db_** and all the models from the **_data_** and **_models_** folder - 
-    1. ```python /path_to_project_directory/data/process_data.py '/path_to_project_directory/data/messages.csv' '/path_to_project_directory/data/categories.csv' '/path_to_project_directory/data/'```
-    2. ```python /path_to_project_directory/models/train_classifier.py '/path_to_project_directory/data/' '/path_to_project_directory/models/'```
-    3. ```python /path_to_project_directory/run.py```
+6. Or if you wish to create your own SQLite database and train all the models from scratch run the following commands in sequence in the terminal after navigating to the project folder and removing the **_disaster_response.db_** and all the models from the **_data_** and **_models_** folder - 
+    1. ```python data/process_data.py data/messages.csv data/categories.csv data/```
+    2. ```python models/train_classifier.py data/ models/```
+    3. ```python run.py```
