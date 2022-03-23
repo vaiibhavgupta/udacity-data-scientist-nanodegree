@@ -2,9 +2,9 @@
 Welcome to the repository of second Project of Udacity's Data Scientist Nanodegree in collaboration with [Figure 8](https://appen.com).
 
 ## Project Overview
-The project helps in classifying messages into 35 pre-defined categories that helps in sorting and sending out these messages to appropriate relief teams and agencies. The project deals with real-world data, collected by [Figure 8](https://appen.com), as these messages were sent out during a disaster.
+The project helps in classifying messages into 36 pre-defined categories that helps in sorting and sending out these messages to appropriate relief teams and agencies. The project deals with real-world data, collected by [Figure 8](https://appen.com), as these messages were sent out during a disaster.
 
-We kick-start the project off by building an ETL pipeline that loads the training data from CSV files, cleans the data, and loads the processed data into an SQLite database. We then use this SQLite database to perform some EDA and train a ```RandomForestClassifier``` for each of the 35 pre-defined categories present in the training data.
+We kick-start the project off by building an ETL pipeline that loads the training data from CSV files, cleans the data, and loads the processed data into an SQLite database. We then use this SQLite database to perform some EDA and train a ```RandomForestClassifier``` for each of the 36 pre-defined categories present in the training data.
 
 Training a separate model for each category helps us in two ways:
 1. Dealing with the imbalance present at the dataset level -
