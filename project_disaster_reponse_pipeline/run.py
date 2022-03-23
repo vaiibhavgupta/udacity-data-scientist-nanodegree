@@ -17,8 +17,9 @@ class GetGlobalVariables:
     'RFC_other_infrastructure', 'RFC_aid_centers', 'RFC_money', 'RFC_death', 'RFC_electricity', 'RFC_military', 'RFC_floods', 'RFC_cold', 
     'RFC_missing_people', 'RFC_search_and_rescue', 'RFC_other_weather', 'RFC_shops', 'RFC_tools', 'RFC_refugees', 'RFC_aid_related', 'RFC_shelter', 
     'RFC_other_aid', 'RFC_security', 'RFC_related', 'RFC_buildings', 'RFC_request', 'RFC_offer', 'RFC_infrastructure_related', 'RFC_food', 
-    'RFC_hospitals', 'RFC_medical_help', 'RFC_storm', 'RFC_medical_products']
+    'RFC_hospitals', 'RFC_medical_help', 'RFC_storm', 'RFC_medical_products', 'RFC_child_alone']
 
+    RFC_child_alone = pickle.load(open(f'{models_folder}/RFC_child_alone.pickle', 'rb'))
     RFC_direct_report = pickle.load(open(f'{models_folder}/RFC_direct_report.pickle', 'rb'))
     RFC_clothing = pickle.load(open(f'{models_folder}/RFC_clothing.pickle', 'rb'))
     RFC_water = pickle.load(open(f'{models_folder}/RFC_water.pickle', 'rb'))
@@ -123,7 +124,7 @@ welcome_page_layout = html.Div([
     html.P('Welcome!', style=heading_style_h1),
     html.Br(),
     html.P('You have landed on Disaster Response Message Classification Project. This project helps in clssifying disaster response messages '\
-            'in 35 Categories and vizualizing interesting trends in data provided by Figure 8.', style=heading_style_h2),
+            'in 36 Categories and vizualizing interesting trends in data provided by Figure 8.', style=heading_style_h2),
     html.Br(),
     html.Br(),
     html.Br(),
@@ -188,6 +189,9 @@ classify_message_page_layout = html.Div([
         html.Button('Medical Help', id='Medical Help', style=output_button_style_default),
         html.Button('Storm', id='Storm', style=output_button_style_default),
         html.Button('Medical Products', id='Medical Products', style=output_button_style_default)
+    ]),
+    html.Div([
+        html.Button('Child Alone', id='Child Alone', style=output_button_style_default)
     ])
 ])
 
