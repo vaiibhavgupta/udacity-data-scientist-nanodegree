@@ -60,10 +60,10 @@ def clean_data(df):
     df.drop_duplicates(inplace=True)
     print(f'{df.duplicated().sum()} duplicates.')
 
-    categories_sum = df.select_dtypes(int).sum()
-    all_zero_or_one_col_list = categories_sum[(categories_sum == 0) | (categories_sum == len(df))].index.tolist()
-    df.drop(all_zero_or_one_col_list, axis=1, inplace=True)
-    print(f'\tDeleted columns - {all_zero_or_one_col_list} as they contain all 0s or all 1s.')
+#     categories_sum = df.select_dtypes(int).sum()
+#     all_zero_or_one_col_list = categories_sum[(categories_sum == 0) | (categories_sum == len(df))].index.tolist()
+#     df.drop(all_zero_or_one_col_list, axis=1, inplace=True)
+#     print(f'\tDeleted columns - {all_zero_or_one_col_list} as they contain all 0s or all 1s.')
 
     print("\tReplacing 2s with 1s for 'related' column on assumption - Mistake in Data Entry as 2 lies near 1 on keyboard.\n")
     df.loc[df['related'] == 2, 'related'] = 1
