@@ -60,20 +60,25 @@ def load_data(database_folder_path):
     for table_name in all_df_dict.keys():
         category_column = table_name.replace(GetGlobalVariables.table_name_startswith_substring, '')
         print(f'\t{category_column}')
-        temp_grouped_df = all_df_dict[table_name].groupby(category_column).agg({'message':'count'}).reset_index()
-        num_messages_0 = temp_grouped_df[temp_grouped_df[category_column] == 0]['message'].values[0]
-        num_messages_1 = temp_grouped_df[temp_grouped_df[category_column] == 1]['message'].values[0]
-        
-        if num_messages_0 < num_messages_1:
-            if num_messages_1 < 1.25 * num_messages_0:
-                all_df_dict_counts[category_column] = {0: num_messages_0, 1: num_messages_1}
+        try:
+            temp_grouped_df = all_df_dict[table_name].groupby(category_column).agg({'message':'count'}).reset_index()
+            num_messages_0 = temp_grouped_df[temp_grouped_df[category_column] == 0]['message'].values[0]
+            num_messages_1 = temp_grouped_df[temp_grouped_df[category_column] == 1]['message'].values[0]
+
+            if num_messages_0 < num_messages_1:
+                if num_messages_1 < 1.25 * num_messages_0:
+                    all_df_dict_counts[category_column] = {0: num_messages_0, 1: num_messages_1}
+                else:
+                    all_df_dict_counts[category_column] = {0: num_messages_0, 1: int(1.25 * num_messages_0)}
             else:
-                all_df_dict_counts[category_column] = {0: num_messages_0, 1: int(1.25 * num_messages_0)}
-        else:
-            if num_messages_0 < 1.25 * num_messages_1:
-                all_df_dict_counts[category_column] = {0: num_messages_0, 1: num_messages_1}
-            else:
-                all_df_dict_counts[category_column] = {0: int(1.25 * num_messages_1), 1: num_messages_1}
+                if num_messages_0 < 1.25 * num_messages_1:
+                    all_df_dict_counts[category_column] = {0: num_messages_0, 1: num_messages_1}
+                else:
+                    all_df_dict_counts[category_column] = {0: int(1.25 * num_messages_1), 1: num_messages_1}
+        except:
+            temp_grouped_df = all_df_dict[table_name].groupby(category_column).agg({'message':'count'}).reset_index()
+            num_messages_0 = temp_grouped_df[temp_grouped_df[category_column] == 0]['message'].values[0]
+            all_df_dict_counts[category_column] = {0: num_messages_0, 1: 0}
     
     print('Statistics stored Successfully.\n')
     return all_df_dict, all_df_dict_counts
@@ -94,8 +99,16 @@ def get_dataframe_dictionary(database_folder_path):
         category_column = table_name.replace(GetGlobalVariables.table_name_startswith_substring, '')
         print(f'\t{category_column}')
         temp_df = all_df_dict[table_name]
-        temp_df_0 = temp_df[temp_df[category_column] == 0].sample(n=all_df_dict_counts[category_column][0])
-        temp_df_1 = temp_df[temp_df[category_column] == 1].sample(n=all_df_dict_counts[category_column][1])
+        
+        if all_df_dict_counts[category_column][0] != 0:
+            temp_df_0 = temp_df[temp_df[category_column] == 0].sample(n=all_df_dict_counts[category_column][0])
+        else:
+            temp_df_0 = pd.DataFrame()
+        if all_df_dict_counts[category_column][1] != 0:
+            temp_df_1 = temp_df[temp_df[category_column] == 1].sample(n=all_df_dict_counts[category_column][1])
+        else:
+            temp_df_1 = pd.DataFrame()
+        
         all_df_dict[table_name] = pd.concat([temp_df_0, temp_df_1], axis=0).sample(frac=1).reset_index(drop=True)
 
     print(f'Balanced dataset creation Successful.\n')
