@@ -9,7 +9,7 @@ The project's objective is to analyze the general demographics data for a mail-o
 The results of the project are summarized in a Medium BlogPost [here](https://medium.com/@vaiibhavgupta/customer-segmentation-report-for-arvato-financial-services-a-udacity-nanodegree-project-8972c01dd748).
 
 ## Project Structure
-- **arvato_project_workbook.ipynb.ipynb_** - Project Code Notebook.
+- **arvato_project_workbook.ipynb** - Project Code Notebook.
 
 ## Required Packages
 Following packages should be installed with Python 3.9.5 to successfully run this project
