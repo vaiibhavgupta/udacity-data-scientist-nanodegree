@@ -46,7 +46,7 @@ Following packages should be installed with Python 3.9.5 to successfully run thi
 1. Download all the files and directories available here to a directory on your local and maintain the same directory structure as in here.
 2. Create a new sub-directory named **_models_** and unzip here **_models.zip_** storing all the models (having extension **_.pickle_**) within this newly created sub-directory.
 3. Create and activate a virtual environment that satisfies all the above-mentioned requirements.
-4. Run the following commands in sequence in the terminal after navigating to the project folder and removing the **_disaster_response.db_** from **_data_** folder - 
+4. Run the following commands in sequence in the terminal after navigating to the project folder - 
     1. ```python data/process_data.py data/messages.csv data/categories.csv data/```
     2. ```python models/train_classifier.py data/ models/```
     3. ```python run.py```
