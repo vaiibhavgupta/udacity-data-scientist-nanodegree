@@ -2,7 +2,7 @@
 Welcome to the repository of the third Project of Udacity's Data Scientist Nanodegree in collaboration with IBM Watson Studio.
 
 ## Project Overview
-The project objective is to make recommendations of articles for users in IBM Watson Studio data platform based on the history of user's interactions with articles.
+The objective of the project is to make article recommendations for users in IBM Watson Studio data platform based on the history of user-article interactions.
 
 The Project Notebook if divided into following parts:
 1. Exploratory Data Analysis
